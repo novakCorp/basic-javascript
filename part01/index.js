@@ -12,9 +12,9 @@ console.log(document.body); */
 
 
 // Getting elements by Id
-const header = document.getElementById('header-title');
-console.log(header);
-header.textContent = 'Hello';
+// const header = document.getElementById('header-title');
+// console.log(header);
+// header.textContent = 'Hello';
 //header.innerText = 'Inner text';
  
 
@@ -36,6 +36,7 @@ for(let i = 0; i < items.length; i++) {
 // it finds the first element and take it. If there are more repeated elements, it's going
 // to get the first one and then ignore the rest
 
+/*
 let header2 = document.querySelector('#main-header');
 console.log(header2);
 
@@ -46,4 +47,53 @@ let submit = document.querySelector('input[type="submit"]');
 submit.value = 'SEND';
 
 let item = document.querySelector('.list-group-item');
-item.style.color = 'red';
+item.style.color = 'red'; */
+
+
+// TRAVERSING THE DOM
+/*
+let itemsList = document.querySelector("#items");
+
+// parentNode
+console.log(itemsList.parentNode)
+
+// parentElement
+console.log(itemsList.parentElement);
+
+// children
+console.log(itemsList.children);
+
+// firstChild
+console.log(itemsList.firstChild);
+
+// lastChild
+console.log(itemsList.lastChild);
+*/
+
+// Create elements
+let newDiv = document.createElement('div');
+
+// Add class
+newDiv.className = 'hello';
+
+// Add id
+newDiv.id = 'hello1';
+
+// Add attr
+newDiv.setAttribute('title', 'hello Div');
+
+// Create text node
+let newDivText = document.createTextNode('Hello World');
+
+// Add Text to div
+newDiv.appendChild(newDivText);
+
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
+
+console.log(newDiv);
+
+newDiv.style.fontSize = '30px';
+// Add the newDiv to the HTML on the page
+container.insertBefore(newDiv, h1);
+
